@@ -1,27 +1,21 @@
+
+variable "project"{
+    default = "roboshop"
+}
+
+variable "environment" {
+    type = string
+}
+
 variable "ami_id" {
     type = string
-    default = "ami-09c813fb71547fc4f"
+    default     = "ami-09c813fb71547fc4f"
 }
 
 variable "instance_type" {
     type = string
-    default = "t3.micro"
 }
 
-variable "ec2_tags" {
-    type = map
-    default = {
-        Name = "terraform-demo"
-        Terraform = "true"
-        Project = "joindevops"
-        Environment = "dev"
-    }
-}
-
-variable "sg_name" {
-    type = string
-    default = "allow-all"
-}
 
 variable "cidr" {
     type = list
